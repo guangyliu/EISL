@@ -18,7 +18,7 @@ class EISLNatCrfCriterionConfig(FairseqDataclass):
 
 
 
-@register_criterion("EISL_nat")
+@register_criterion("EISL")
 class EISLNatCriterion(FairseqCriterion):
     def __init__(self, task, label_smoothing, ngram, ce_factor, ngram_factor):
         super().__init__(task)
@@ -314,7 +314,7 @@ class EISLNatCriterion(FairseqCriterion):
         if weight_list is None:
             weight_list = [1. / len(ngram_list)] * len(ngram_list)
 
-        decoder_outputs = torch.relu(decoder_outputs + 20) - 20  # 过滤掉过小的概率  logp = -20 ---> p = 2e-9
+        decoder_outputs = torch.relu(decoder_outputs + 20) - 20  # Filter out the 
 
         # [batch_size, output_len, target_len]
         index = target_idx.unsqueeze(1).expand(-1, output_len, tgt_len)

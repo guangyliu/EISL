@@ -1,3 +1,4 @@
+Attention: below commands should be executed under fairseq folder.
 ## Enviroments
 We recommend to create a new conda enviroment (named eisl):
 ```shell

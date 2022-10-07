@@ -1,2 +1,16 @@
 .ipynb_checkpoints
 *.ipynb_checkpoints
+fairseq/multi30k-bin/
+fairseq/wmt18-raw-bin/
+fairseq/examples/bart/pretrained
+fairseq/examples/translation/iwslt*
+fairseq/examples/translation/moses*
+fairseq/examples/translation/*.tar.gz
+fairseq/log/out
+fairseq/log/tf
+fairseq/log/bk_tf.tar.gz
+fairseq/complexity_out
+fairseq/checkpoints/*
+fairseq/apex
+__pycache__
+*__pycache__

@@ -21,11 +21,15 @@ cd ckpts
 bash download_models.sh $noise
 ```
 
-## Download the Processed Datasets
+## Download the Processed Datasets 
 You can download the processed data (noisy Multi30k data) by run the script
 ```shell
 bash download_datasets.sh
 ```
 
+## Code
+Work In Progress
+
 ## Generated Results
 The generated files from test set are in [log/hypo/hypo](log/hypo/hypo). The original source is *test.de* and the target is *test.en*. For different noise (e.g., shuffle), \*hypo.txt is the generated files of different loss and different scale of noise, and \*bleu is the BLEU score of each target sentence.
+

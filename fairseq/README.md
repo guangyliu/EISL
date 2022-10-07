@@ -26,7 +26,7 @@ You can download the processed data (noisy Multi30k data) by run the script
 ```shell
 bash download_datasets.sh
 ```
-
+Please refer to [fairseq/examples/translation](fairseq/examples/translation) for more details of the data preprocessing.
 ## Code
 Work In Progress
 

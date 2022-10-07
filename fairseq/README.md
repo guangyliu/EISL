@@ -1,5 +1,3 @@
-
-
 ## Enviroments
 We recommend to create a new conda enviroment (named eisl):
 ```shell
@@ -16,7 +14,7 @@ bash install_pkgs.sh
 ```
 
 ## Download the Pretrained Models
-For Multi30k dataset, we provide all the trained models (BART) mentioned in the Section 4.1. You can run the below command to download and extract the models ($noise should be one of [shuffle, repetition, blank, multiple])"
+For Multi30k dataset, we provide all the trained models (BART) mentioned in the Section 4.1. You can run the below command to download and extract the models ($noise should be one of *shuffle, repetition, blank, multiple*)
 ```shell
 cd ckpts 
 bash download_models.sh $noise
@@ -27,3 +25,6 @@ You can download the processed data (noisy Multi30k data) by run the script
 ```shell
 bash download_datasets.sh
 ```
+
+## Generated Results
+The generated files from test set are in [log/hypo/hypo](log/hypo/hypo). The original source is *test.de* and the target is *test.en*. For different noise (e.g., shuffle), \*hypo.txt is the generated files of different loss and different scale of noise, and \*bleu is the BLEU score of each target sentence.

@@ -12,5 +12,6 @@ fairseq/log/bk_tf.tar.gz
 fairseq/complexity_out
 fairseq/checkpoints/*
 fairseq/apex
+fairseq/old_shell
 __pycache__
 *__pycache__

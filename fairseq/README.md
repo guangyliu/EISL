@@ -14,21 +14,13 @@ Install the required package by running the script:
 bash install_pkgs.sh
 ```
 
-## Download the Pretrained Models
-For Multi30k dataset, we provide all the trained models (BART) mentioned in the Section 4.1. You can run the below command to download and extract the models ($noise should be one of *shuffle, repetition, blank, multiple*)
-```shell
-cd ckpts 
-bash download_models.sh $noise
-```
-
-## Download the Processed Datasets 
-You can download the processed data (noisy Multi30k data) by run the script
-```shell
-bash download_datasets.sh
-```
-Please refer to [fairseq/examples/translation](examples/translation) for more details of the data preprocessing.
-## Code
-Work In Progress
+## Pretrained models and processed data
+The BART checkpoints and the pre-noised Multi30k archives that used to be downloadable from
+a university SharePoint are no longer available. The noisy training targets are regenerated
+from Multi30k with `bk_shell/generate_noisy_MT.py` / `bk_shell/generate_noise.sh` (shuffle,
+repetition, blank, synthetic noise; see [examples/translation](examples/translation) for the
+base preprocessing), and the
+models retrain with the run scripts in this folder.
 
 ## Generated Results
 The generated files from test set are in [log/hypo/hypo](log/hypo/hypo). The original source is *test.de* and the target is *test.en*. For different noise (e.g., shuffle), \*hypo.txt is the generated files of different loss and different scale of noise, and \*bleu is the BLEU score of each target sentence.

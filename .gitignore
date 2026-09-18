@@ -15,3 +15,8 @@ fairseq/apex
 fairseq/old_shell
 __pycache__
 *__pycache__
+
+# build artefacts
+fairseq/build/
+*.so
+*.o
